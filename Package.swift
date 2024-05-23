@@ -8,7 +8,7 @@
 /// you may not use this file except in compliance with the License.
 /// You may obtain a copy of the License at
 ///
-/// 1) .LICENSE
+/// 1) LICENSE file
 /// 2) https://apache.org/licenses/LICENSE-2.0
 ///
 /// Unless required by applicable law or agreed to in writing, software
@@ -23,8 +23,8 @@
 import PackageDescription
 
 let package = Package(
-    name: "Wand",
-    defaultLocalization: "ru_su",
+    name: "Wand_CoreNFC",
+    defaultLocalization: "ru",
 
     platforms: [
         .iOS(.v14),
@@ -34,15 +34,15 @@ let package = Package(
     ],
 
     products: [
-        .library(name: "Wand", targets: ["Wand"])
+        .library(name: "Wand_CoreNFC", targets: ["WandCoreNFC"])
     ],
 
     dependencies: [
-        
+        .package(url: "https://github.com/el-machine/Wand.git", from: "1.1.2")
     ],
 
     targets: [
-        .target(name: "Wand"),
-        .testTarget(name: "wandTests", dependencies: ["Wand"])
+        .target(name: "WandCoreNFC", dependencies: ["Wand"]),
+        .testTarget(name: "wandTests", dependencies: ["WandCoreNFC"])
     ]
 )
