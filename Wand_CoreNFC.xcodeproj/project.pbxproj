@@ -9,22 +9,18 @@
 /* Begin PBXBuildFile section */
 		613966272BE0F532004C18A3 /* Play.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6162624528BC8E2A00D63EA5 /* Play.swift */; };
 		613966662BE0FB0D004C18A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6162624728BC8E2B00D63EA5 /* Assets.xcassets */; };
-		615159132BF76A8C001646EA /* Wand_Foundation in Frameworks */ = {isa = PBXBuildFile; productRef = 61F648C62BEA122900C2625C /* Wand_Foundation */; };
+		615159132BF76A8C001646EA /* Wand_CoreNFC in Frameworks */ = {isa = PBXBuildFile; productRef = 61F648C62BEA122900C2625C /* Wand_CoreNFC */; };
 		6162625428BC8E2B00D63EA5 /* Play.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6162624528BC8E2A00D63EA5 /* Play.swift */; };
 		6162625828BC8E2B00D63EA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6162624728BC8E2B00D63EA5 /* Assets.xcassets */; };
-		61F0A2D52C0871B100A1C123 /* CoreLocation_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F0A2CD2C0871B100A1C123 /* CoreLocation_Tests.swift */; };
-		61F0A2D62C0871B100A1C123 /* CoreLocation_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F0A2CD2C0871B100A1C123 /* CoreLocation_Tests.swift */; };
-		61F0A2D72C0871B100A1C123 /* T_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F0A2CE2C0871B100A1C123 /* T_Tests.swift */; };
-		61F0A2D82C0871B100A1C123 /* T_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F0A2CE2C0871B100A1C123 /* T_Tests.swift */; };
-		61F0A2D92C0871B100A1C123 /* WeatherKit_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F0A2CF2C0871B100A1C123 /* WeatherKit_Tests.swift */; };
-		61F0A2DA2C0871B100A1C123 /* WeatherKit_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F0A2CF2C0871B100A1C123 /* WeatherKit_Tests.swift */; };
 		61F0A2DB2C0871B100A1C123 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F0A2D12C0871B100A1C123 /* Unit.swift */; };
 		61F0A2DC2C0871B100A1C123 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F0A2D12C0871B100A1C123 /* Unit.swift */; };
 		61F0A2DD2C0871B100A1C123 /* Package.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 61F0A2D32C0871B100A1C123 /* Package.xctestplan */; };
 		61F0A2DE2C0871B100A1C123 /* Package.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 61F0A2D32C0871B100A1C123 /* Package.xctestplan */; };
 		61F0A2E02C0871CD00A1C123 /* CoreNFC_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F0A2DF2C0871CD00A1C123 /* CoreNFC_Tests.swift */; };
 		61F0A2E12C0871CD00A1C123 /* CoreNFC_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F0A2DF2C0871CD00A1C123 /* CoreNFC_Tests.swift */; };
-		61F648C72BEA122900C2625C /* Wand_Foundation in Frameworks */ = {isa = PBXBuildFile; productRef = 61F648C62BEA122900C2625C /* Wand_Foundation */; };
+		61F0A2E42C0872CA00A1C123 /* Any_ in Frameworks */ = {isa = PBXBuildFile; productRef = 61F0A2E32C0872CA00A1C123 /* Any_ */; };
+		61F0A2E72C0872CF00A1C123 /* Any_ in Frameworks */ = {isa = PBXBuildFile; productRef = 61F0A2E62C0872CF00A1C123 /* Any_ */; };
+		61F648C72BEA122900C2625C /* Wand_CoreNFC in Frameworks */ = {isa = PBXBuildFile; productRef = 61F648C62BEA122900C2625C /* Wand_CoreNFC */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61F648C72BEA122900C2625C /* Wand_Foundation in Frameworks */,
+				61F648C72BEA122900C2625C /* Wand_CoreNFC in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61F0A2E72C0872CF00A1C123 /* Any_ in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				615159132BF76A8C001646EA /* Wand_Foundation in Frameworks */,
+				615159132BF76A8C001646EA /* Wand_CoreNFC in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61F0A2E42C0872CA00A1C123 /* Any_ in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +154,13 @@
 			path = wandTests;
 			sourceTree = "<group>";
 		};
+		61F0A2E52C0872CF00A1C123 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		OBJ_138 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +185,7 @@
 				615159052BF76666001646EA /* CONTRIB.TXT */,
 				OBJ_141 /* LICENSE */,
 				OBJ_142 /* README.md */,
+				61F0A2E52C0872CF00A1C123 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -200,7 +206,7 @@
 			);
 			name = watchPlay;
 			packageProductDependencies = (
-				61F648C62BEA122900C2625C /* Wand_Foundation */,
+				61F648C62BEA122900C2625C /* Wand_CoreNFC */,
 			);
 			productName = "WatchPlay Watch App";
 			productReference = 613966152BE0F4EF004C18A3 /* watchPlay.app */;
@@ -220,6 +226,9 @@
 				6139664D2BE0F87A004C18A3 /* PBXTargetDependency */,
 			);
 			name = watchPlayTests;
+			packageProductDependencies = (
+				61F0A2E62C0872CF00A1C123 /* Any_ */,
+			);
 			productName = WatchPlayTests;
 			productReference = 613966482BE0F87A004C18A3 /* watchPlayTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -238,7 +247,7 @@
 			);
 			name = Play;
 			packageProductDependencies = (
-				61F648C62BEA122900C2625C /* Wand_Foundation */,
+				61F648C62BEA122900C2625C /* Wand_CoreNFC */,
 			);
 			productName = "Sandbox (iOS)";
 			productReference = 6162624C28BC8E2B00D63EA5 /* Play.app */;
@@ -258,6 +267,9 @@
 				618D53D62BE3C5120098DB6F /* PBXTargetDependency */,
 			);
 			name = wandTests;
+			packageProductDependencies = (
+				61F0A2E32C0872CA00A1C123 /* Any_ */,
+			);
 			productName = Tests;
 			productReference = 618D53D12BE3C5120098DB6F /* wandTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -301,6 +313,7 @@
 			mainGroup = OBJ_5;
 			packageReferences = (
 				61A37BC52BE24B97007B7FEE /* XCLocalSwiftPackageReference "." */,
+				61F0A2E22C0872CA00A1C123 /* XCRemoteSwiftPackageReference "Any" */,
 			);
 			productRefGroup = OBJ_138 /* Products */;
 			projectDirPath = "";
@@ -363,10 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61F0A2E12C0871CD00A1C123 /* CoreNFC_Tests.swift in Sources */,
-				61F0A2D82C0871B100A1C123 /* T_Tests.swift in Sources */,
 				61F0A2DC2C0871B100A1C123 /* Unit.swift in Sources */,
-				61F0A2D62C0871B100A1C123 /* CoreLocation_Tests.swift in Sources */,
-				61F0A2DA2C0871B100A1C123 /* WeatherKit_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,10 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61F0A2E02C0871CD00A1C123 /* CoreNFC_Tests.swift in Sources */,
-				61F0A2D72C0871B100A1C123 /* T_Tests.swift in Sources */,
 				61F0A2DB2C0871B100A1C123 /* Unit.swift in Sources */,
-				61F0A2D52C0871B100A1C123 /* CoreLocation_Tests.swift in Sources */,
-				61F0A2D92C0871B100A1C123 /* WeatherKit_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +431,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 145;
+				CURRENT_PROJECT_VERSION = 147;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = LZSP4Z4B6A;
 				ENABLE_PREVIEWS = YES;
@@ -485,7 +492,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 145;
+				CURRENT_PROJECT_VERSION = 147;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = LZSP4Z4B6A;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -539,7 +546,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 145;
+				CURRENT_PROJECT_VERSION = 147;
 				DEVELOPMENT_TEAM = LZSP4Z4B6A;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -587,7 +594,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 145;
+				CURRENT_PROJECT_VERSION = 147;
 				DEVELOPMENT_TEAM = LZSP4Z4B6A;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -649,7 +656,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_ENTITLEMENTS = App/Entitlements.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 145;
+				CURRENT_PROJECT_VERSION = 147;
 				DEVELOPMENT_TEAM = LZSP4Z4B6A;
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
@@ -749,7 +756,7 @@
 				CODE_SIGN_ENTITLEMENTS = App/Entitlements.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 145;
+				CURRENT_PROJECT_VERSION = 147;
 				DEVELOPMENT_TEAM = LZSP4Z4B6A;
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -824,7 +831,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 145;
+				CURRENT_PROJECT_VERSION = 147;
 				DEVELOPMENT_TEAM = LZSP4Z4B6A;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -878,7 +885,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 145;
+				CURRENT_PROJECT_VERSION = 147;
 				DEVELOPMENT_TEAM = LZSP4Z4B6A;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -1094,11 +1101,32 @@
 		};
 /* End XCLocalSwiftPackageReference section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		61F0A2E22C0872CA00A1C123 /* XCRemoteSwiftPackageReference "Any" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/el-machine/Any";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		61F648C62BEA122900C2625C /* Wand_Foundation */ = {
+		61F0A2E32C0872CA00A1C123 /* Any_ */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 61F0A2E22C0872CA00A1C123 /* XCRemoteSwiftPackageReference "Any" */;
+			productName = Any_;
+		};
+		61F0A2E62C0872CF00A1C123 /* Any_ */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 61F0A2E22C0872CA00A1C123 /* XCRemoteSwiftPackageReference "Any" */;
+			productName = Any_;
+		};
+		61F648C62BEA122900C2625C /* Wand_CoreNFC */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 61A37BC52BE24B97007B7FEE /* XCLocalSwiftPackageReference "." */;
-			productName = Wand_Foundation;
+			productName = Wand_CoreNFC;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

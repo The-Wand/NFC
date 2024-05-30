@@ -18,19 +18,20 @@
 /// Created by Alex Kozin
 /// 2020 El Machine
 
-#if !targetEnvironment(simulator)
-#if canImport(CoreNFC)
+#if canImport(CoreNFC) && !targetEnvironment(simulator)
 import CoreNFC
 
+import Any_
+import WandCoreLocation
 import Wand
+
 import XCTest
 
 @available(macOS, unavailable)
-@available(watchOS, unavailable)
 @available(tvOS, unavailable)
 @available(visionOS, unavailable)
-class CoreNFC_Tests: XCTestCase {
-
+@available(watchOS, unavailable)
+class NFCNDEFMessage_Tests: XCTestCase {
 
     func test_NFCNDEFMessage_read() {
         let e = expectation()
@@ -118,5 +119,4 @@ class CoreNFC_Tests: XCTestCase {
 
 }
 
-#endif
 #endif
