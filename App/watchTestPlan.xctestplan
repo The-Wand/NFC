@@ -23,7 +23,7 @@
   "testTargets" : [
     {
       "target" : {
-        "containerPath" : "container:wand_Foundation.xcodeproj",
+        "containerPath" : "container:Wand_CoreNFC.xcodeproj",
         "identifier" : "613966472BE0F87A004C18A3",
         "name" : "watchPlayTests"
       }
