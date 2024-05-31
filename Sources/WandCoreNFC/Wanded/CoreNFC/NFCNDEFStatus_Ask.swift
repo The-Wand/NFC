@@ -46,8 +46,8 @@ extension NFCNDEFStatus: AskingNil, Wanded {
         }
 
         //Make request
-        wand |  .Optional.once(ask.once) { (tag: NFCNDEFTag) in
-            
+        wand | .Optional.every { (tag: NFCNDEFTag) in
+
             session.connect(to: tag) { (error: Error?) in
                 
                 guard wand.addIf(exist: error) == nil else {
@@ -60,7 +60,7 @@ extension NFCNDEFStatus: AskingNil, Wanded {
                     guard wand.addIf(exist: error) == nil else {
                         return
                     }
-                    
+
                     wand.add(capacity)
                     wand.add(status)
                 }

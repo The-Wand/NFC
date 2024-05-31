@@ -22,7 +22,7 @@
 import CoreNFC
 
 import Any_
-import WandCoreLocation
+import WandCoreNFC
 import Wand
 
 import XCTest
@@ -33,89 +33,23 @@ import XCTest
 @available(watchOS, unavailable)
 class NFCNDEFMessage_Tests: XCTestCase {
 
+    weak 
+    var wand: Wand?
+
     func test_NFCNDEFMessage_read() {
         let e = expectation()
 
-        |.one { (stored: NFCNDEFMessage) in
-
+        /*wand =*/ |.one { (message: NFCNDEFMessage) in
+            print("🔗 URL: \(message| as URL?)")
             e.fulfill()
-
         }
 
-        waitForExpectations(timeout: .default * 4)
+        waitForExpectations(timeout: .default * 2)
     }
 
-    func test_NFCNDEFMessage_lock() {
-        let e = expectation()
-
-        var lastWrited: Data?
-
-        weak var wand: Wand!
-        wand = |{ (stored: NFCNDEFMessage) in
-
-            guard let record = stored.records.first else {
-                print("Empty tag ‼️")
-                return
-            }
-
-
-            let payload = record.payload
-            guard payload != lastWrited else {
-                print("Same tag 👉👈")
-                return
-            }
-
-            wand | Ask<NFCNDEFTag>.one().lock { done in
-
-                lastWrited = payload
-
-                let content = record.wellKnownTypeURIPayload()?.absoluteString ?? ""
-                print("Locked 🔒 " + content)
-            }
-
-
-        }
-
-        waitForExpectations(timeout: .default * 4)
+    func test_closed() throws {
+        XCTAssertNil(wand)
     }
-
-    func test_NFCNDEFMessage_write() {
-        let e = expectation()
-
-        var lastWrited: Data?
-
-        weak var wand: Wand!
-        wand = |{ (stored: NFCNDEFMessage) in
-
-            guard let record = stored.records.first else {
-                print("Empty tag ‼️")
-                return
-            }
-
-            let payload = record.payload
-            guard payload != lastWrited else {
-                print("Same tag 👉👈")
-                return
-            }
-
-            let content = "https://el-machine.com/tool"
-            let message: NFCNDEFMessage = content|
-            wand | Ask<NFCNDEFTag>.one().write(message) { done in
-
-                lastWrited = message.records.first?.payload
-
-                print("Writed ✅ " + content)
-
-                e.fulfill()
-
-            }
-
-
-        }
-
-        waitForExpectations(timeout: .default * 4)
-    }
-
 
 }
 

@@ -23,6 +23,7 @@ import CoreNFC
 import Wand
 
 @available(iOS 13.0, *)
+@inline(__always)
 postfix
 public
 func |(url: URL) -> NFCNDEFMessage {
@@ -30,6 +31,7 @@ func |(url: URL) -> NFCNDEFMessage {
 }
 
 @available(iOS 13.0, *)
+@inline(__always)
 postfix
 public
 func |(url: URL?) -> NFCNDEFMessage {
@@ -37,6 +39,7 @@ func |(url: URL?) -> NFCNDEFMessage {
 }
 
 @available(iOS 13.0, *)
+@inline(__always)
 postfix
 public
 func |(msg: NFCNDEFMessage?) -> URL? {
@@ -44,14 +47,18 @@ func |(msg: NFCNDEFMessage?) -> URL? {
 }
 
 @available(iOS 13.0, *)
+@inline(__always)
 postfix
 public
 func |(msg: NFCNDEFMessage) -> URL? {
     msg.records.first?.wellKnownTypeURIPayload()
 }
 
+public
 extension Wand.Error {
 
+    @inline(__always)
+    public
     static
     func nfc(_ reason: String) -> Error {
         NFCReaderError.init(.readerErrorInvalidParameter,
@@ -59,5 +66,15 @@ extension Wand.Error {
     }
 
 }
+
+//extension Error {
+//
+//    static
+//    func wand_nfc(_ reason: String) -> Error {
+//        NFCReaderError.init(.readerErrorInvalidParameter,
+//                            userInfo: [NSLocalizedDescriptionKey: reason])
+//    }
+//
+//}
 
 #endif

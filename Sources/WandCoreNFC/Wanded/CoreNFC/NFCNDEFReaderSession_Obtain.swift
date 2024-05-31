@@ -23,9 +23,9 @@ import CoreNFC
 import Wand
 
 extension NFCNDEFReaderSession: Obtain {
-    
+
     @inline(__always)
-    public 
+    public
     static
     func obtain(by wand: Wand?) -> Self {
 
@@ -47,47 +47,38 @@ extension NFCNDEFReaderSession: Obtain {
 
 }
 
-public
 extension NFCNDEFReaderSession {
 
     class Delegate: NSObject, NFCNDEFReaderSessionDelegate, Wanded {
 
-        public
         func readerSessionDidBecomeActive(_ session: NFCNDEFReaderSession) {
             isWanded?.add(true as Bool, for: "NFCNDEFReaderSessionIsReady")
         }
 
-        public
         func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
             isWanded?.add(false as Bool, for: "NFCNDEFReaderSessionIsReady")
             isWanded?.add(error)
         }
 
-        public
         func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
         }
 
         @available(iOS 13.0, *)
-        public 
         func readerSession(_ session: NFCNDEFReaderSession, didDetect tags: [NFCNDEFTag]) {
 
-            if let first = tags.first {
-                
-                if let wand = isWanded {
-
-
-
-//                    let address = Wand.address(for: first)
-//                    print("💪🏽 set \(address)")
-//                    Wand.all[address] = Wand.Weak(item: wand)
-
-                    wand.add(first)
-                }
+            guard let first = tags.first, let wand = isWanded else {
+                return
             }
 
+            let address = Memory.address(for: first)
+            Wand.all[address] = Wand.Weak(item: wand)
+            wand.add(first)
+
+//            TODO:
 //            if tags.count > 1 {
-//                isPiped?.put(tags)
+//                isWanded?.put(tags)
 //            }
+
         }
 
     }

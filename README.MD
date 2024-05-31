@@ -4,15 +4,11 @@
 ### Usage
 ```bash
 
-#Ask Data
-"https://api.github.com/gists" | { (data: Data) in
+#Ask NFCNDEFTag
+|.every { (tag: NFCNDEFTag) in
 
 }
 
-#Wait for Notification
-UIApplication.didBecomeActiveNotification | { (n: Notification) in
-
-}
 
 ```
 ### Idea
@@ -30,12 +26,11 @@ You ideas, comments, contribution are welcome |
 Tasks
 
 - [x] Notification
-- [x] Data
 - [x] URL
 - [x] JsonObject
-- [ ] REST
-
-- [x] Data
+- [X] REST
+- [x] Foundation
+- [x] CoreNFC
 
 [Alex Kozin](mailto:al@el-machine.com)  
 [El Machine 🤖](https://el-machine.com) 2024

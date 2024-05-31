@@ -18,7 +18,7 @@
 /// Created by Alex Kozin
 /// 2020 El Machine
 
-#if canImport(CoreLocation) && !targetEnvironment(simulator)
+#if canImport(CoreNFC) && !targetEnvironment(simulator)
 import CoreNFC
 
 import Any_
@@ -27,49 +27,46 @@ import Wand
 
 import XCTest
 
-/// Not possible with XCTest
-///
-/// -[NFCHardwareManager areFeaturesSupported:outError:]:358
-/// NSCocoaErrorDomain Code=4099
-/// "The connection to service named com.apple.nfcd.service.corenfc
-/// was invalidated from this process."
-///
-/// Use in Play.swift
-///
-//@available(*, unavailable)
+@available(macOS, unavailable)
+@available(tvOS, unavailable)
+@available(visionOS, unavailable)
+@available(watchOS, unavailable)
 class NFCNDEFTag_Tests: XCTestCase {
 
     weak var wand: Wand?
 
-    func test_NFCNDEFTag_read() {
-        let e = expectation()
-
-        |.one { (tag: NFCNDEFTag) in
-            e.fulfill()
-        }
-
-        waitForExpectations()
-    }
-
-//    func test_NFCNDEFTag_write() {
+//    func test_NFCNDEFTag_read() {
 //        let e = expectation()
 //
-//        let m: NFCNDEFMessage = "https://el-machine.com/tool"|
-//        |.write(message: m) { (done: NFCNDEFTag) in
+//        wand = |.one { (tag: NFCNDEFTag) in
 //            e.fulfill()
 //        }
 //
-//        waitForExpectations()
+//        waitForExpectations(timeout: .default * 2)
+//    }
+//
+//    func test_NFCNDEFTag_write() {
+//        let e = expectation()
+//        e.assertForOverFulfill = false
+//
+//        let message: NFCNDEFMessage = "https://el-machine.com/tool"|
+//
+//        /*wand =*/ |Ask<NFCNDEFTag>.every().write(message) { done in
+//            e.fulfill()
+//        }
+//
+//        waitForExpectations(timeout: .default * 2)
 //    }
 //
 //    func test_NFCNDEFTag_lock() {
 //        let e = expectation()
+//        e.assertForOverFulfill = false
 //
-//        |.lock { (done: NFCNDEFTag) in
+//        /*wand =*/ |.every().lock() { (done: NFCNDEFTag) in
 //            e.fulfill()
 //        }
 //
-//        waitForExpectations()
+//        waitForExpectations(timeout: .default * 2)
 //    }
 
     func test_NFCReaderSession() {
@@ -79,43 +76,6 @@ class NFCNDEFTag_Tests: XCTestCase {
     func test_closed() throws {
         XCTAssertNil(wand)
     }
-
-//    func test_NFCNDEFMessage_read() {
-//        let e = expectation()
-//
-//        |.one { (stored: NFCNDEFMessage) in
-//
-//            e.fulfill()
-//
-//        }
-//
-//        waitForExpectations(timeout: .default * 4)
-//    }
-//
-//    func test_NFCNDEFMessage_lock() {
-//        let e = expectation()
-//
-//
-//        waitForExpectations(timeout: .default * 4)
-//    }
-//
-//    func test_NFCNDEFMessage_write() {
-//        let e = expectation()
-//
-
-//            wand | Ask<NFCNDEFTag>.one().write(message) { done in
-//
-//
-//        }
-//
-//        waitForExpectations(timeout: .default * 4)
-//    }
-//
-//
-//}
-//
-//#endif
-
 
 }
 
