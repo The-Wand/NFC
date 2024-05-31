@@ -20,6 +20,10 @@
 
 import SwiftUI
 
+import CoreNFC
+import WandCoreNFC
+import Wand
+
 @available(iOS 14, macOS 12, tvOS 14, watchOS 7, *)
 @main
 struct PlayApp: App {
@@ -37,7 +41,13 @@ struct ContentView: View {
     var body: some View {
 
         VStack {
-            Image(systemName: "wand.and.stars")
+            Image(systemName: "wand.and.stars").onAppear {
+                
+//                |.one { (tag: NFCNDEFTag) in
+//                    print(tag)
+//                }
+
+            }
             Text("Hello, world!")
         }
         .padding()

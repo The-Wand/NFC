@@ -9,15 +9,17 @@
 /* Begin PBXBuildFile section */
 		613966272BE0F532004C18A3 /* Play.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6162624528BC8E2A00D63EA5 /* Play.swift */; };
 		613966662BE0FB0D004C18A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6162624728BC8E2B00D63EA5 /* Assets.xcassets */; };
+		613CD9592C08A63900F0AD35 /* NFCNDEFMessage_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613CD9502C08A63900F0AD35 /* NFCNDEFMessage_Tests.swift */; };
+		613CD95A2C08A63900F0AD35 /* NFCNDEFMessage_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613CD9502C08A63900F0AD35 /* NFCNDEFMessage_Tests.swift */; };
+		613CD95B2C08A63900F0AD35 /* NFCNDEFTag_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613CD9512C08A63900F0AD35 /* NFCNDEFTag_Tests.swift */; };
+		613CD95C2C08A63900F0AD35 /* NFCNDEFTag_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613CD9512C08A63900F0AD35 /* NFCNDEFTag_Tests.swift */; };
+		613CD9612C08A63900F0AD35 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613CD9552C08A63900F0AD35 /* Unit.swift */; };
+		613CD9622C08A63900F0AD35 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613CD9552C08A63900F0AD35 /* Unit.swift */; };
+		613CD9632C08A63900F0AD35 /* Package.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 613CD9572C08A63900F0AD35 /* Package.xctestplan */; };
+		613CD9642C08A63900F0AD35 /* Package.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 613CD9572C08A63900F0AD35 /* Package.xctestplan */; };
 		615159132BF76A8C001646EA /* Wand_CoreNFC in Frameworks */ = {isa = PBXBuildFile; productRef = 61F648C62BEA122900C2625C /* Wand_CoreNFC */; };
 		6162625428BC8E2B00D63EA5 /* Play.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6162624528BC8E2A00D63EA5 /* Play.swift */; };
 		6162625828BC8E2B00D63EA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6162624728BC8E2B00D63EA5 /* Assets.xcassets */; };
-		61F0A2DB2C0871B100A1C123 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F0A2D12C0871B100A1C123 /* Unit.swift */; };
-		61F0A2DC2C0871B100A1C123 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F0A2D12C0871B100A1C123 /* Unit.swift */; };
-		61F0A2DD2C0871B100A1C123 /* Package.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 61F0A2D32C0871B100A1C123 /* Package.xctestplan */; };
-		61F0A2DE2C0871B100A1C123 /* Package.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 61F0A2D32C0871B100A1C123 /* Package.xctestplan */; };
-		61F0A2E02C0871CD00A1C123 /* CoreNFC_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F0A2DF2C0871CD00A1C123 /* CoreNFC_Tests.swift */; };
-		61F0A2E12C0871CD00A1C123 /* CoreNFC_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F0A2DF2C0871CD00A1C123 /* CoreNFC_Tests.swift */; };
 		61F0A2E42C0872CA00A1C123 /* Any_ in Frameworks */ = {isa = PBXBuildFile; productRef = 61F0A2E32C0872CA00A1C123 /* Any_ */; };
 		61F0A2E72C0872CF00A1C123 /* Any_ in Frameworks */ = {isa = PBXBuildFile; productRef = 61F0A2E62C0872CF00A1C123 /* Any_ */; };
 		61F648C72BEA122900C2625C /* Wand_CoreNFC in Frameworks */ = {isa = PBXBuildFile; productRef = 61F648C62BEA122900C2625C /* Wand_CoreNFC */; };
@@ -43,26 +45,23 @@
 /* Begin PBXFileReference section */
 		613966152BE0F4EF004C18A3 /* watchPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watchPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		613966482BE0F87A004C18A3 /* watchPlayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = watchPlayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		613CD9502C08A63900F0AD35 /* NFCNDEFMessage_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCNDEFMessage_Tests.swift; sourceTree = "<group>"; };
+		613CD9512C08A63900F0AD35 /* NFCNDEFTag_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCNDEFTag_Tests.swift; sourceTree = "<group>"; };
+		613CD9552C08A63900F0AD35 /* Unit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		613CD9572C08A63900F0AD35 /* Package.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Package.xctestplan; sourceTree = "<group>"; };
 		615158E82BF761DC001646EA /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		615158E92BF761DC001646EA /* watchInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = watchInfo.plist; sourceTree = "<group>"; };
 		615158EB2BF765A2001646EA /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		615159052BF76666001646EA /* CONTRIB.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = CONTRIB.TXT; sourceTree = "<group>"; };
 		6162624528BC8E2A00D63EA5 /* Play.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Play.swift; sourceTree = "<group>"; };
 		6162624728BC8E2B00D63EA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6162624C28BC8E2B00D63EA5 /* Play.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Play.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6162624C28BC8E2B00D63EA5 /* play.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = play.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		618D53D12BE3C5120098DB6F /* wandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		618F8F182BEA00D400618E7C /* testPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = testPlan.xctestplan; sourceTree = "<group>"; };
 		618F8F272BEA04BF00618E7C /* watchTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = watchTestPlan.xctestplan; sourceTree = "<group>"; };
 		61A37BB42BE24A5F007B7FEE /* PlayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61B1B41C2BC9696200BD1F36 /* Entitlements.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Entitlements.entitlements; sourceTree = "<group>"; };
 		61B464E72BEB76B70064B4C1 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		61C1C17D2BFF8C5100E08CB2 /* Package.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; name = Package.resolved; path = Wand_CoreNFC.xcodeproj/xcshareddata/swiftpm/Package.resolved; sourceTree = "<group>"; };
-		61F0A2CD2C0871B100A1C123 /* CoreLocation_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreLocation_Tests.swift; sourceTree = "<group>"; };
-		61F0A2CE2C0871B100A1C123 /* T_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = T_Tests.swift; sourceTree = "<group>"; };
-		61F0A2CF2C0871B100A1C123 /* WeatherKit_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherKit_Tests.swift; sourceTree = "<group>"; };
-		61F0A2D12C0871B100A1C123 /* Unit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
-		61F0A2D32C0871B100A1C123 /* Package.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Package.xctestplan; sourceTree = "<group>"; };
-		61F0A2DF2C0871CD00A1C123 /* CoreNFC_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreNFC_Tests.swift; sourceTree = "<group>"; };
 		OBJ_141 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		OBJ_142 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +102,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		613CD9542C08A63900F0AD35 /* Cases */ = {
+			isa = PBXGroup;
+			children = (
+				613CD9502C08A63900F0AD35 /* NFCNDEFMessage_Tests.swift */,
+				613CD9512C08A63900F0AD35 /* NFCNDEFTag_Tests.swift */,
+			);
+			path = Cases;
+			sourceTree = "<group>";
+		};
+		613CD9562C08A63900F0AD35 /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				613CD9552C08A63900F0AD35 /* Unit.swift */,
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
+		613CD9582C08A63900F0AD35 /* wandTests */ = {
+			isa = PBXGroup;
+			children = (
+				613CD9542C08A63900F0AD35 /* Cases */,
+				613CD9562C08A63900F0AD35 /* Unit */,
+				613CD9572C08A63900F0AD35 /* Package.xctestplan */,
+			);
+			path = wandTests;
+			sourceTree = "<group>";
+		};
 		6162624428BC8E2A00D63EA5 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,38 +146,9 @@
 		618F8ED22BE9FDCE00618E7C /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				61F0A2D42C0871B100A1C123 /* wandTests */,
+				613CD9582C08A63900F0AD35 /* wandTests */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		61F0A2D02C0871B100A1C123 /* Cases */ = {
-			isa = PBXGroup;
-			children = (
-				61F0A2DF2C0871CD00A1C123 /* CoreNFC_Tests.swift */,
-				61F0A2CD2C0871B100A1C123 /* CoreLocation_Tests.swift */,
-				61F0A2CE2C0871B100A1C123 /* T_Tests.swift */,
-				61F0A2CF2C0871B100A1C123 /* WeatherKit_Tests.swift */,
-			);
-			path = Cases;
-			sourceTree = "<group>";
-		};
-		61F0A2D22C0871B100A1C123 /* Unit */ = {
-			isa = PBXGroup;
-			children = (
-				61F0A2D12C0871B100A1C123 /* Unit.swift */,
-			);
-			path = Unit;
-			sourceTree = "<group>";
-		};
-		61F0A2D42C0871B100A1C123 /* wandTests */ = {
-			isa = PBXGroup;
-			children = (
-				61F0A2D02C0871B100A1C123 /* Cases */,
-				61F0A2D22C0871B100A1C123 /* Unit */,
-				61F0A2D32C0871B100A1C123 /* Package.xctestplan */,
-			);
-			path = wandTests;
 			sourceTree = "<group>";
 		};
 		61F0A2E52C0872CF00A1C123 /* Frameworks */ = {
@@ -164,7 +161,7 @@
 		OBJ_138 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6162624C28BC8E2B00D63EA5 /* Play.app */,
+				6162624C28BC8E2B00D63EA5 /* play.app */,
 				613966152BE0F4EF004C18A3 /* watchPlay.app */,
 				613966482BE0F87A004C18A3 /* watchPlayTests.xctest */,
 				61A37BB42BE24A5F007B7FEE /* PlayTests.xctest */,
@@ -179,7 +176,6 @@
 				6162624428BC8E2A00D63EA5 /* App */,
 				615158EB2BF765A2001646EA /* info.plist */,
 				61B464E72BEB76B70064B4C1 /* Package.swift */,
-				61C1C17D2BFF8C5100E08CB2 /* Package.resolved */,
 				OBJ_138 /* Products */,
 				618F8ED22BE9FDCE00618E7C /* Tests */,
 				615159052BF76666001646EA /* CONTRIB.TXT */,
@@ -233,9 +229,9 @@
 			productReference = 613966482BE0F87A004C18A3 /* watchPlayTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6162624B28BC8E2B00D63EA5 /* Play */ = {
+		6162624B28BC8E2B00D63EA5 /* play */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6162625A28BC8E2B00D63EA5 /* Build configuration list for PBXNativeTarget "Play" */;
+			buildConfigurationList = 6162625A28BC8E2B00D63EA5 /* Build configuration list for PBXNativeTarget "play" */;
 			buildPhases = (
 				6162624828BC8E2B00D63EA5 /* Sources */,
 				6162624928BC8E2B00D63EA5 /* Frameworks */,
@@ -245,12 +241,12 @@
 			);
 			dependencies = (
 			);
-			name = Play;
+			name = play;
 			packageProductDependencies = (
 				61F648C62BEA122900C2625C /* Wand_CoreNFC */,
 			);
 			productName = "Sandbox (iOS)";
-			productReference = 6162624C28BC8E2B00D63EA5 /* Play.app */;
+			productReference = 6162624C28BC8E2B00D63EA5 /* play.app */;
 			productType = "com.apple.product-type.application";
 		};
 		618D53D02BE3C5120098DB6F /* wandTests */ = {
@@ -340,7 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61F0A2DE2C0871B100A1C123 /* Package.xctestplan in Resources */,
+				613CD9642C08A63900F0AD35 /* Package.xctestplan in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +352,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61F0A2DD2C0871B100A1C123 /* Package.xctestplan in Resources */,
+				613CD9632C08A63900F0AD35 /* Package.xctestplan in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,8 +371,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61F0A2E12C0871CD00A1C123 /* CoreNFC_Tests.swift in Sources */,
-				61F0A2DC2C0871B100A1C123 /* Unit.swift in Sources */,
+				613CD9622C08A63900F0AD35 /* Unit.swift in Sources */,
+				613CD95A2C08A63900F0AD35 /* NFCNDEFMessage_Tests.swift in Sources */,
+				613CD95C2C08A63900F0AD35 /* NFCNDEFTag_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,8 +389,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61F0A2E02C0871CD00A1C123 /* CoreNFC_Tests.swift in Sources */,
-				61F0A2DB2C0871B100A1C123 /* Unit.swift in Sources */,
+				613CD9612C08A63900F0AD35 /* Unit.swift in Sources */,
+				613CD9592C08A63900F0AD35 /* NFCNDEFMessage_Tests.swift in Sources */,
+				613CD95B2C08A63900F0AD35 /* NFCNDEFTag_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +429,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 147;
+				CURRENT_PROJECT_VERSION = 177;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = LZSP4Z4B6A;
 				ENABLE_PREVIEWS = YES;
@@ -492,7 +490,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 147;
+				CURRENT_PROJECT_VERSION = 177;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = LZSP4Z4B6A;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -546,7 +544,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 147;
+				CURRENT_PROJECT_VERSION = 177;
 				DEVELOPMENT_TEAM = LZSP4Z4B6A;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -594,7 +592,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 147;
+				CURRENT_PROJECT_VERSION = 177;
 				DEVELOPMENT_TEAM = LZSP4Z4B6A;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -656,7 +654,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_ENTITLEMENTS = App/Entitlements.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 147;
+				CURRENT_PROJECT_VERSION = 177;
 				DEVELOPMENT_TEAM = LZSP4Z4B6A;
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
@@ -706,7 +704,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "el-machine.Play";
-				PRODUCT_NAME = Play;
+				PRODUCT_NAME = play;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -756,7 +754,7 @@
 				CODE_SIGN_ENTITLEMENTS = App/Entitlements.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 147;
+				CURRENT_PROJECT_VERSION = 177;
 				DEVELOPMENT_TEAM = LZSP4Z4B6A;
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -801,7 +799,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "el-machine.Play";
-				PRODUCT_NAME = Play;
+				PRODUCT_NAME = play;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator xros xrsimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -831,7 +829,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 147;
+				CURRENT_PROJECT_VERSION = 177;
 				DEVELOPMENT_TEAM = LZSP4Z4B6A;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -861,8 +859,8 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,7";
 				TEST_HOST = "";
-				"TEST_HOST[sdk=*]" = "$(BUILT_PRODUCTS_DIR)/Play.app/Play";
-				"TEST_HOST[sdk=macosx*]" = "$(BUILT_PRODUCTS_DIR)/Play.app/Contents/MacOS/Play";
+				"TEST_HOST[sdk=*]" = "$(BUILT_PRODUCTS_DIR)/play.app/play";
+				"TEST_HOST[sdk=macosx*]" = "$(BUILT_PRODUCTS_DIR)/play.app/Contents/MacOS/play";
 				"TEST_HOST[sdk=watchos*]" = "$(BUILT_PRODUCTS_DIR)/watchPlay.app/watchPlay";
 				TVOS_DEPLOYMENT_TARGET = 14.0;
 			};
@@ -885,7 +883,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 147;
+				CURRENT_PROJECT_VERSION = 177;
 				DEVELOPMENT_TEAM = LZSP4Z4B6A;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -910,8 +908,8 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,7";
 				TEST_HOST = "";
-				"TEST_HOST[sdk=*]" = "$(BUILT_PRODUCTS_DIR)/Play.app/Play";
-				"TEST_HOST[sdk=macosx*]" = "$(BUILT_PRODUCTS_DIR)/Play.app/Contents/MacOS/Play";
+				"TEST_HOST[sdk=*]" = "$(BUILT_PRODUCTS_DIR)/play.app/play";
+				"TEST_HOST[sdk=macosx*]" = "$(BUILT_PRODUCTS_DIR)/play.app/Contents/MacOS/play";
 				"TEST_HOST[sdk=watchos*]" = "$(BUILT_PRODUCTS_DIR)/watchPlay.app/watchPlay";
 				TVOS_DEPLOYMENT_TARGET = 14.0;
 			};
