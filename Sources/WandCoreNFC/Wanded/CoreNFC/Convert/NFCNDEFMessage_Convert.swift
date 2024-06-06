@@ -26,6 +26,26 @@ import Wand
 @inline(__always)
 postfix
 public
+func |(string: String) -> NFCNDEFMessage {
+    NFCNDEFMessage(records: [
+        .wellKnownTypeURIPayload(url: URL(string: string)!)!
+    ])
+}
+
+@available(iOS 13.0, *)
+@inline(__always)
+postfix
+public
+func |(string: String?) -> NFCNDEFMessage {
+    NFCNDEFMessage(records: [
+        .wellKnownTypeURIPayload(url: URL(string: string!)!)!
+    ])
+}
+
+@available(iOS 13.0, *)
+@inline(__always)
+postfix
+public
 func |(url: URL) -> NFCNDEFMessage {
     NFCNDEFMessage(records: [.wellKnownTypeURIPayload(url: url)!])
 }
@@ -53,28 +73,5 @@ public
 func |(msg: NFCNDEFMessage) -> URL? {
     msg.records.first?.wellKnownTypeURIPayload()
 }
-
-public
-extension Wand.Error {
-
-    @inline(__always)
-    public
-    static
-    func nfc(_ reason: String) -> Error {
-        NFCReaderError.init(.readerErrorInvalidParameter,
-                            userInfo: [NSLocalizedDescriptionKey: reason])
-    }
-
-}
-
-//extension Error {
-//
-//    static
-//    func wand_nfc(_ reason: String) -> Error {
-//        NFCReaderError.init(.readerErrorInvalidParameter,
-//                            userInfo: [NSLocalizedDescriptionKey: reason])
-//    }
-//
-//}
 
 #endif

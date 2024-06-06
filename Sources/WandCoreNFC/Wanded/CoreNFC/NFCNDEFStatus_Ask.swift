@@ -64,7 +64,7 @@ extension NFCNDEFStatus: AskingNil, Wanded {
                     wand.add(capacity)
                     wand.add(status)
                 }
-                
+
             }
             
         }

@@ -51,19 +51,23 @@ extension NFCNDEFReaderSession {
 
     class Delegate: NSObject, NFCNDEFReaderSessionDelegate, Wanded {
 
+        @inlinable
         func readerSessionDidBecomeActive(_ session: NFCNDEFReaderSession) {
             isWanded?.add(true as Bool, for: "NFCNDEFReaderSessionIsReady")
         }
 
+        @inlinable
         func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
             isWanded?.add(false as Bool, for: "NFCNDEFReaderSessionIsReady")
             isWanded?.add(error)
         }
 
+        @inlinable
         func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
         }
 
         @available(iOS 13.0, *)
+        @inlinable
         func readerSession(_ session: NFCNDEFReaderSession, didDetect tags: [NFCNDEFTag]) {
 
             guard let first = tags.first, let wand = isWanded else {
@@ -71,7 +75,7 @@ extension NFCNDEFReaderSession {
             }
 
             let address = Memory.address(for: first)
-            Wand.all[address] = Wand.Weak(item: wand)
+            Wand.all[address] = Weak(item: wand)
             wand.add(first)
 
 //            TODO:

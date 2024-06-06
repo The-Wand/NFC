@@ -48,22 +48,17 @@ extension NFCNDEFMessage: AskingNil, Wanded {
         wand | .Optional.every { (tag: NFCNDEFTag) in
             
             session.connect(to: tag) { (error: Error?) in
-                
                 tag.readNDEF { message, error in
-                    
-                    if 
+                    if
                         let error = error as? NFCReaderError,
                         error.code != .ndefReaderSessionErrorZeroLengthMessage
                     {
                         wand.add(error as Error)
                     }
-                    
                     wand.add(message ?? NFCNDEFMessage(data: Data())!)
-                    
                 }
-                
             }
-            
+
         }
         
     }

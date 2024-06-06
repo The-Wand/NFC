@@ -15,9 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Wand_Foundation"
-               BuildableName = "Wand_Foundation"
-               BlueprintName = "Wand_Foundation"
+               BlueprintIdentifier = "Wand_CoreNFC"
+               BuildableName = "Wand_CoreNFC"
+               BlueprintName = "Wand_CoreNFC"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,16 +45,6 @@
                ReferencedContainer = "container:">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "WandTests"
-               BuildableName = "WandTests"
-               BlueprintName = "WandTests"
-               ReferencedContainer = "container:">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -77,9 +67,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "Wand_Foundation"
-            BuildableName = "Wand_Foundation"
-            BlueprintName = "Wand_Foundation"
+            BlueprintIdentifier = "Wand_CoreNFC"
+            BuildableName = "Wand_CoreNFC"
+            BlueprintName = "Wand_CoreNFC"
             ReferencedContainer = "container:">
          </BuildableReference>
       </MacroExpansion>
