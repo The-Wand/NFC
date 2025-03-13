@@ -23,7 +23,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Wand_CoreNFC",
+    name: "WandNFC",
     defaultLocalization: "ru",
 
     platforms: [
@@ -34,20 +34,20 @@ let package = Package(
     ],
 
     products: [
-        .library(name: "Wand_CoreNFC", targets: ["WandCoreNFC"])
+        .library(name: "WandNFC", targets: ["WandNFC"])
     ],
 
     dependencies: [
-        .package(url: "https://github.com/el-machine/Wand.git", from: "1.3.5"),
-        .package(url: "https://github.com/el-machine/Any.git", from: "1.0.1")
+        .package(url: "https://github.com/The-Wand/Any.git", from: "1.0.1"),
+        .package(url: "https://github.com/The-Wand/Wand.git", from: "1.5.5"),
     ],
 
     targets: [
 
-        .target(name: "WandCoreNFC", dependencies: ["Wand"] ),
+        .target(name: "WandNFC", dependencies: ["Wand"] ),
         .testTarget(name: "wandTests", dependencies:
                         [
-                            "WandCoreNFC",
+                            "WandNFC",
                             .product(name: "Any_", package: "Any")
                         ]
                    )

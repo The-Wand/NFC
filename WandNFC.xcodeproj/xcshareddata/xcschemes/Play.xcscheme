@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1530"
+   LastUpgradeVersion = "1620"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -17,8 +17,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6162624B28BC8E2B00D63EA5"
                BuildableName = "play.app"
-               BlueprintName = "play"
-               ReferencedContainer = "container:Wand_CoreNFC.xcodeproj">
+               BlueprintName = "Play"
+               ReferencedContainer = "container:WandNFC.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -38,7 +38,7 @@
                BlueprintIdentifier = "618D53D02BE3C5120098DB6F"
                BuildableName = "wandTests.xctest"
                BlueprintName = "wandTests"
-               ReferencedContainer = "container:Wand_CoreNFC.xcodeproj">
+               ReferencedContainer = "container:WandNFC.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -59,8 +59,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6162624B28BC8E2B00D63EA5"
             BuildableName = "play.app"
-            BlueprintName = "play"
-            ReferencedContainer = "container:Wand_CoreNFC.xcodeproj">
+            BlueprintName = "Play"
+            ReferencedContainer = "container:WandNFC.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -76,8 +76,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6162624B28BC8E2B00D63EA5"
             BuildableName = "play.app"
-            BlueprintName = "play"
-            ReferencedContainer = "container:Wand_CoreNFC.xcodeproj">
+            BlueprintName = "Play"
+            ReferencedContainer = "container:WandNFC.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

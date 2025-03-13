@@ -1,36 +1,55 @@
 
-## API for Any (thing) |
+## **[Declarative Programming Language](https://github.com/The-Wand/Wand)**
 
-### Usage
-```bash
+|wand created to support all platfroms   
+Prototype implemented on Swift
 
-#Ask NFCNDEFTag
+### Swift Package
+[📦 |Location](https://github.com/The-Wand/Location)  
+
+### ⚙️ Usage
+
+```swift
+
+//Wait for every NFCNDEFTag
 |.every { (tag: NFCNDEFTag) in
 
 }
 
-
 ```
-### Idea
-  Imagine that you have a black box that can give you any object 💡  
-  You don't know what is already in box or what will happens inside ⚙️   
-  Simply ask for objects that you need
 
-### Сoncept
+### 💡 Idea
+  Imagine that you have the black box that can give you an ```Any``` object.   
+  You don't know what's already in the box and [what happens inside.](https://wikipedia.org/wiki/Encapsulation_(computer_programming))   
+      
+  Ask for object that you need with |
 
-Wand started from idea about receiving anything in most efficient and fast way 🪄  
-Just add on¯e sign to completion handler and retreive the result 📦  
+```bash
+|{ (result: Object) in
+            
+}
+```
+```bash
+ingredients | { (result: Object) in
+            
+}
+```
+```bash
+ingredients | .one { (t: T) in
+            
+} | .every { (u: U) in
 
-You ideas, comments, contribution are welcome |
+} | .while { (v: V) in
+  true
+}
+```
 
-Tasks
+### 🪄 Сoncept
 
-- [x] Notification
-- [x] URL
-- [x] JsonObject
-- [X] REST
-- [x] Foundation
-- [x] CoreNFC
+Wand started from the idea about receiving anything in most efficient way.   
+Add one sign to anything and retreive the result 📦
+
+You ideas, comments and contributions are welcome |
 
 [Alex Kozin](mailto:al@el-machine.com)  
-[El Machine 🤖](https://el-machine.com) 2024
+[El Machine 🤖](https://el-machine.com)
