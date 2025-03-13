@@ -44,7 +44,7 @@ extension NFCNDEFStatus: AskingNil, Wanded {
         }
 
         //Make request
-        wand | .Optional.every { (tag: NFCNDEFTag) in
+        wand | ask.option { (tag: NFCNDEFTag) in
 
             session.connect(to: tag) { (error: Error?) in
                 

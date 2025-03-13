@@ -73,7 +73,7 @@ extension NFCNDEFReaderSession {
             }
 
             let address = Memory.address(for: first)
-            Wand.all[address] = Weak(item: wand)
+            Wand.all[address] = Wand.Weak(item: wand)
             wand.add(first)
 
 //            TODO:
