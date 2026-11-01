@@ -16,35 +16,37 @@
 /// Created by Alex Kozin
 /// El Machine 🤖
 
-
 #if canImport(CoreNFC)
 import CoreNFC
 import Wand
 
 @available(iOS 13.0, *)
-extension NFCNDEFMessage: AskingNil, Wanded {
+extension NFCNDEFMessage: Ask.Nil, Wanded {
     
     @inline(__always)
     public
     static
-    func wand<T>(_ wand: Wand, asks ask: Ask<T>) {
+    func ask<C, T>(with scope: C, ask: Ask<T>) -> Core {
+        
+        let wand = Core.to(scope)
+        
         //Save ask
-        guard wand.answer(the: ask) else {
-            return
+        guard wand + ask else {
+            return wand
         }
         
         //Request for a first time
         
         //Prepare context
-        let session: NFCNDEFReaderSession = wand.obtain()
+        let session: NFCNDEFReaderSession = wand.get()
         
         //Set the cleaner
-        wand.setCleaner(for: ask) {
+        ask & {
             session.invalidate()
         }
         
         //Make request
-        wand | ask.option { (tag: NFCNDEFTag) in
+        return wand | ask.depend { (tag: NFCNDEFTag) in
 
             session.connect(to: tag) { (error: Error?) in
                 tag.readNDEF { message, error in
@@ -52,9 +54,9 @@ extension NFCNDEFMessage: AskingNil, Wanded {
                         let error = error as? NFCReaderError,
                         error.code != .ndefReaderSessionErrorZeroLengthMessage
                     {
-                        wand.add(error as Error)
+                        wand + (error as Error)
                     }
-                    wand.add(message ?? NFCNDEFMessage(data: Data())!)
+                    wand + (message ?? NFCNDEFMessage(data: Data())!)
                 }
             }
 

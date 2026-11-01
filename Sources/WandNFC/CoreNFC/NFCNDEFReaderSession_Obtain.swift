@@ -20,16 +20,16 @@
 import CoreNFC
 import Wand
 
-extension NFCNDEFReaderSession: Obtain {
-
+extension NFCNDEFReaderSession: Obtainable {
+    
     @inline(__always)
     public
     static
-    func obtain(by wand: Wand?) -> Self {
+    func obtain<C>(with scope: C?, by wand: Core?) -> Self {
 
-        let wand = wand ?? Wand()
+        let wand = wand ?? Core()
 
-        let delegate = wand.add(Delegate())
+        let delegate = wand + Delegate()
 
         let source = Self(delegate: delegate,
                           queue: DispatchQueue.global(),
@@ -38,9 +38,9 @@ extension NFCNDEFReaderSession: Obtain {
         let message: String = wand.get() ?? "Hold to know what it is 🧙🏾‍♂️"
         source.alertMessage = message
 
-        wand.add(source)
+        wand + source
 
-        return wand.add(source)
+        return wand + source
     }
 
 }
@@ -51,13 +51,13 @@ extension NFCNDEFReaderSession {
 
         @inlinable
         func readerSessionDidBecomeActive(_ session: NFCNDEFReaderSession) {
-            isWanded?.add(true as Bool, for: "NFCNDEFReaderSessionIsReady")
+            isWanded + true & "NFCNDEFReaderSessionIsReady"
         }
 
         @inlinable
         func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
-            isWanded?.add(false as Bool, for: "NFCNDEFReaderSessionIsReady")
-            isWanded?.add(error)
+            isWanded + false & "NFCNDEFReaderSessionIsReady"
+            isWanded + error
         }
 
         @inlinable
@@ -68,13 +68,13 @@ extension NFCNDEFReaderSession {
         @inlinable
         func readerSession(_ session: NFCNDEFReaderSession, didDetect tags: [NFCNDEFTag]) {
 
-            guard let first = tags.first, let wand = isWanded else {
+            guard let entry = tags.first, let wand = isWanded else {
                 return
             }
 
-            let address = Memory.address(for: first)
-            Wand.all[address] = Wand.Weak(item: wand)
-            wand.add(first)
+            let address: Int = entry|// Memory.address(for: tag)
+            Core.all[address] = Core.Weak(item: wand)
+            wand + entry
 
 //            TODO:
 //            if tags.count > 1 {

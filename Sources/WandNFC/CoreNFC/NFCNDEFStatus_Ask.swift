@@ -21,46 +21,48 @@ import CoreNFC
 import Wand
 
 @available(iOS 13.0, *)
-extension NFCNDEFStatus: AskingNil, Wanded {
-
+extension NFCNDEFStatus: Ask.Nil, Wanded {
+    
     @inline(__always)
     public
     static
-    func wand<T>(_ wand: Wand, asks ask: Ask<T>) {
-
+    func ask<C, T>(with scope: C, ask: Ask<T>) -> Core {
+        
+        let wand = Core.to(scope)
+        
         //Save ask
-        guard wand.answer(the: ask, check: true) else {
-            return
+        guard wand + ask else {
+            return wand
         }
 
         //Request for a first time
 
         //Prepare context
-        let session: NFCNDEFReaderSession = wand.obtain()
+        let session: NFCNDEFReaderSession = wand.get()
 
         //Set the cleaner
-        wand.setCleaner(for: ask) {
+        ask & {
             session.invalidate()
         }
 
         //Make request
-        wand | ask.option { (tag: NFCNDEFTag) in
+        return wand | ask.depend { (tag: NFCNDEFTag) in
 
             session.connect(to: tag) { (error: Error?) in
                 
-                guard wand.addIf(exist: error) == nil else {
+                guard wand +? error == nil else {
                     session.restartPolling()
                     return
                 }
                 
                 tag.queryNDEFStatus() { (status: NFCNDEFStatus, capacity: Int, error: Error?) in
                     
-                    guard wand.addIf(exist: error) == nil else {
+                    guard wand +? error == nil else {
                         return
                     }
 
-                    wand.add(capacity)
-                    wand.add(status)
+                    wand + capacity
+                    wand + status
                 }
 
             }

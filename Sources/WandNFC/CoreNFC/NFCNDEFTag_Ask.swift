@@ -20,7 +20,7 @@
 import CoreNFC
 import Wand
 
-/// AskingNil
+/// Ask.Nil
 
 ///
 /// | { (tag: NFCNDEFTag) in
@@ -31,8 +31,8 @@ import Wand
 @discardableResult
 prefix
 public
-func | (handler: @escaping (NFCNDEFTag)->() ) -> Wand {
-    nil | Ask.every(handler: handler)
+func | (handler: @escaping (NFCNDEFTag)->() ) -> Core {
+    nil | Ask.one(check: true, handler: handler)
 }
 
 ///
@@ -44,7 +44,7 @@ func | (handler: @escaping (NFCNDEFTag)->() ) -> Wand {
 @discardableResult
 prefix
 public
-func | (ask: Ask<NFCNDEFTag>) -> Wand {
+func | (ask: Ask<NFCNDEFTag>) -> Core {
     nil | ask
 }
 
@@ -58,8 +58,8 @@ func | (ask: Ask<NFCNDEFTag>) -> Wand {
 @inline(__always)
 @discardableResult
 public
-func |<C> (context: C, handler: @escaping (NFCNDEFTag)->() ) -> Wand {
-    .to(context) | Ask.every(handler: handler)
+func |<C> (context: C, handler: @escaping (NFCNDEFTag)->() ) -> Core {
+    .to(context) | Ask.one(check: true, handler: handler)
 }
 
 /// Ask
@@ -71,16 +71,17 @@ func |<C> (context: C, handler: @escaping (NFCNDEFTag)->() ) -> Wand {
 @inline(__always)
 @discardableResult
 public
-func | (wand: Wand, ask: Ask<NFCNDEFTag>) -> Wand {
+func | (wand: Core, ask: Ask<NFCNDEFTag>) -> Core {
+    
     //Save ask
-    guard wand.answer(the: ask, check: true) else {
+    guard wand + ask else {
         return wand
     }
 
     //Request for a first time
 
     //Prepare context
-    let session: NFCNDEFReaderSession = wand.obtain()
+    let session: NFCNDEFReaderSession = wand.get()
     session.alertMessage = wand.get() ?? ""
 
     //Perfom request
@@ -89,7 +90,7 @@ func | (wand: Wand, ask: Ask<NFCNDEFTag>) -> Wand {
     }
 
     //Set the cleaner
-    wand.setCleaner(for: ask) {
+    ask & {
         session.invalidate()
     }
 
@@ -99,12 +100,12 @@ func | (wand: Wand, ask: Ask<NFCNDEFTag>) -> Wand {
 @available(iOS 13.0, *)
 extension NFCNDEFTag {
 
-    var wand:       Wand    {
-        isWanded ?? Wand(for: self)
+    var wand:       Core    {
+        isWanded ?? Core.to(self)
     }
 
-    var isWanded:   Wand?   {
-        Wand[self]
+    var isWanded:   Core?   {
+        Core[self]
     }
 
 }

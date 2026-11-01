@@ -21,7 +21,7 @@ import CoreNFC
 import Wand
 
 public
-extension Wand.Error {
+extension Core.Error {
 
     @inline(__always)
     static
